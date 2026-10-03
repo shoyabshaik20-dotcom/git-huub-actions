@@ -1,9 +1,13 @@
-name: hello
-on: [ push ]
+name: Build
+on:
+  push:
+    branches: [ main ]
 jobs:
-  greet:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: say hello
-        run: echo "Hello GitHub Actions"
+      - name: Show files
+        run: ls -la
+      - name: Print branch
+        run: echo "Building on ${{ github.ref_name }}"
