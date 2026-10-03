@@ -2,7 +2,7 @@ name: hello
 on: [ push ]
 jobs:
   greet:
-    runs-on: ubonto-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@u4
       - name: say hello
