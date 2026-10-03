@@ -1,0 +1,9 @@
+name: hello
+on: [push]
+jobs:
+greet:
+runs-on: ubonto-latest
+steps:
+-uses: actions/checkout@u4
+-name: say hello
+ run: echo "Hello GitHub Actions"
